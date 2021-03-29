@@ -5,14 +5,15 @@ function computerPlay () {
 }
 
 
-let playerChoice = prompt('what is your move?')
 
+let playerChoice = prompt('what is your move?')
 let result;
+
 
 function playRound (playerSelection, computerSelection) {
 
     let compChoice =  computerPlay()
-
+    let playerChoice = prompt('what is your move?')
     if (compChoice == 'rock' && playerChoice.toLowerCase() == 'rock'){
         result ='Its a tie!';
     } else if (compChoice == 'rock' && playerChoice.toLowerCase() == 'paper'){
@@ -34,8 +35,72 @@ function playRound (playerSelection, computerSelection) {
     } else {
         result = 'woops something went wrong';
     }
-    return result;
+    alert (result);
 }
+let score = 0
+let cscore = 0
+function game() {
 
-console.log(playRound(playerChoice, compChoice))
-console.log (computerPlay())
+    playRound(compChoice, playerChoice.toLowerCase);
+    if (result == 'you win!') {
+        score++;
+    } else if (result == 'you lost!'){
+        cscore++;
+    } else {
+        cscore + 0;
+        score + 0;
+    }
+    
+    playRound(compChoice, playerChoice.toLowerCase);
+    if (result == 'you win!') {
+        score++;
+    } else if (result == 'you lost!'){
+        cscore++;
+    } else {
+        cscore + 0;
+        score + 0;
+    }
+    
+    playRound(compChoice, playerChoice.toLowerCase);
+    if (result == 'you win!') {
+        score++;
+    } else if (result == 'you lost!'){
+        cscore++;
+    } else {
+        cscore + 0;
+        score + 0;
+    }
+    
+    playRound(compChoice, playerChoice.toLowerCase);
+    if (result == 'you win!') {
+        score++;
+    } else if (result == 'you lost!'){
+        cscore++;
+    } else {
+        cscore + 0;
+        score + 0;
+    }
+    playRound(compChoice, playerChoice.toLowerCase);
+    if (result == 'you win!') {
+        score++;
+    } else if (result == 'you lost!'){
+        cscore++;
+    } else {
+        cscore + 0;
+        score + 0;
+    }
+
+   let fscore = alert (cscore, score)
+   alert('the computer won '+ cscore + ' points and you won '+ score +' points')
+   if (cscore > score) {
+       alert ('You lost!');
+   } else if (cscore < score) {
+       alert('You won!');
+   } else {
+       alert('It is a tie!');
+   }
+    return fscore;
+    
+}
+console.log (game())
+
