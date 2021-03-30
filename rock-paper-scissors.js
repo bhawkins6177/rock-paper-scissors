@@ -6,13 +6,14 @@ function computerPlay () {
 
 
 
-let playerChoice = prompt('what is your move?')
-let result;
 
+let result;
+let playerChoice = ('')
 
 function playRound (playerSelection, computerSelection) {
 
     let compChoice =  computerPlay()
+    
     let playerChoice = prompt('what is your move?')
     if (compChoice == 'rock' && playerChoice.toLowerCase() == 'rock'){
         result ='Its a tie!';
@@ -35,12 +36,13 @@ function playRound (playerSelection, computerSelection) {
     } else {
         result = 'woops something went wrong';
     }
-    alert (result);
+    alert(result)
+    return result;
 }
 let score = 0
 let cscore = 0
 function game() {
-
+    
     playRound(compChoice, playerChoice.toLowerCase);
     if (result == 'you win!') {
         score++;
@@ -102,5 +104,5 @@ function game() {
     return fscore;
     
 }
-console.log (game())
+game()
 
