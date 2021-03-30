@@ -92,7 +92,7 @@ function game() {
         score + 0;
     }
 
-   let fscore = alert (cscore, score)
+   
    alert('the computer won '+ cscore + ' points and you won '+ score +' points')
    if (cscore > score) {
        alert ('You lost!');
@@ -101,7 +101,7 @@ function game() {
    } else {
        alert('It is a tie!');
    }
-    return fscore;
+    return cscore;
     
 }
 game()
